@@ -10,6 +10,3 @@ class Inventory(Base):
     name = Column(String(100), unique=True, nullable=False) # e.g. "Amoxicillin 500mg"
     stock = Column(Integer, default=0) # How many items we have
     price = Column(Float, nullable=False) # Cost per unit
-
-    # Relationship (One inventory item can be in many prescriptions)
-    prescriptions = relationship("Prescription", back_populates="inventory_item")

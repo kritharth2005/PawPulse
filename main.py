@@ -4,6 +4,7 @@ from app.api.endpoints import owners, pets, doctors, appointments, medical_recor
 from fastapi.middleware.cors import CORSMiddleware
 from app import models
 
+
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.VERSION
